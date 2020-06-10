@@ -44,7 +44,7 @@ class import_images():
                 pass
 
         np.random.shuffle(self.training_data)
-        np.save('cacti.npy',self.training_data)
+        np.save('cacti_cp.npy',self.training_data)
 
         return self.training_data, self.corrupted_data
 
@@ -62,7 +62,7 @@ print("data imported")
 #Importing labels from CSV file
 print("importing labels")
 
-f = open('/Users/rhuck/Documents/CompProjects/Research_NN_Practice/Deep-Learning-Projects/Cacti_Detection/Cacti_jupyternb/aerial-cactus-identification/train.csv')
+f = open('/Users/rhuck/Documents/CompProjects/Research_NN_Practice/Deep-Learning-Projects/Cacti_Detection/Cactus-Detection-Neural-Network/train_cp.csv')
 csv_f = csv.reader(f)
 labels = dict(csv_f)
 del labels['id']
